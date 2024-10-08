@@ -1,0 +1,44 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "My Electron App",
+  "main": "main.js","scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "make": "electron-builder --mac --win --linux"
+  },
+  "build": {
+    "appId": "com.yourname.myapp",
+    "productName": "MyElectronApp",
+    "files": [
+      "dist/",
+      "main.js",
+      "renderer.js", 
+      "index.html",
+      "package.json",
+      "hlight.css",
+      "hone.css",
+      "dino.webp",
+      "tf.min.js",
+      "tf-converter.min.js",
+      "teachablemachine-image.min.js"
+  ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-packager": "^latest",
+    "electron-builder": "^latest"
+  }
+}
